@@ -7,8 +7,27 @@
   <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
+  <div class="page">
+    <header class="top">
+      <div class="brand">Hello, world!</div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        Dark mode
+      </button>
+    </header>
+
+    <main class="content">
+      <p class="eyebrow">Quick demo</p>
+      <h1>Build fast. Ship clean.</h1>
+      <p class="lead">
+        A tiny starter that now supports both light and dark themes, with smooth transitions and a stored
+        preference.
+      </p>
+      <div class="actions">
+        <button class="cta" type="button" data-action>Press me</button>
+        <p class="hint">Opens the console, nothing scary.</p>
+      </div>
+    </main>
+  </div>
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>
