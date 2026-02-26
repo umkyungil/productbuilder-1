@@ -112,6 +112,27 @@ body {
   animation: float-in 620ms ease;
 }
 
+.subnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.95rem;
+}
+
+.subnav a {
+  color: var(--accent-strong);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: border-color var(--transition), color var(--transition), transform var(--transition);
+}
+
+.subnav a:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent);
+}
+
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -221,6 +242,32 @@ h2 {
 .ad-slot {
   width: min(100%, 720px);
   margin-top: 8px;
+}
+
+.info {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 12px;
+}
+
+.list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.footer {
+  margin-top: 32px;
+  padding: 18px 24px 0;
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 @keyframes fade-in {
