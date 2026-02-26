@@ -3,28 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
+  <title>Lotto Picker</title>
   <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
   <div class="page">
     <header class="top">
-      <div class="brand">Hello, world!</div>
+      <div class="brand">Lotto Picker</div>
       <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
         Dark mode
       </button>
     </header>
 
     <main class="content">
-      <p class="eyebrow">Quick demo</p>
-      <h1>Build fast. Ship clean.</h1>
+      <p class="eyebrow">Random draw</p>
+      <h1>Generate your lucky numbers.</h1>
       <p class="lead">
-        A tiny starter that now supports both light and dark themes, with smooth transitions and a stored
-        preference.
+        Click the button to draw six unique numbers between 1 and 45. The theme toggle stays right where it is.
       </p>
-      <div class="actions">
-        <button class="cta" type="button" data-action>Press me</button>
-        <p class="hint">Opens the console, nothing scary.</p>
+      <div class="lotto-card">
+        <div class="lotto-header">
+          <h2>Today’s Pick</h2>
+          <button class="cta" type="button" data-action>Draw numbers</button>
+        </div>
+        <div class="lotto-numbers" data-numbers aria-live="polite"></div>
+        <p class="hint">Numbers are generated locally in your browser.</p>
       </div>
     </main>
   </div>

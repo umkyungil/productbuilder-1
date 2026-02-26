@@ -14,6 +14,12 @@
   --shadow: 0 28px 70px rgba(116, 75, 38, 0.18);
   --ring: 0 0 0 3px rgba(194, 91, 45, 0.2);
   --transition: 220ms ease;
+  --ball-1: #f9d976;
+  --ball-2: #f7a278;
+  --ball-3: #f48498;
+  --ball-4: #9dd6f0;
+  --ball-5: #8ed081;
+  --ball-6: #c6b0ff;
 }
 
 :root[data-theme="dark"] {
@@ -28,6 +34,12 @@
   --button-text: #1c1611;
   --shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
   --ring: 0 0 0 3px rgba(242, 138, 85, 0.25);
+  --ball-1: #f5c85b;
+  --ball-2: #f08b6a;
+  --ball-3: #ee6f8e;
+  --ball-4: #7fbfe0;
+  --ball-5: #78b86d;
+  --ball-6: #b49cff;
 }
 
 * {
@@ -96,7 +108,7 @@ body {
 .content {
   display: grid;
   gap: 18px;
-  max-width: 640px;
+  max-width: 720px;
   animation: float-in 620ms ease;
 }
 
@@ -115,12 +127,62 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
 .lead {
   margin: 0;
   font-size: 1.1rem;
   color: var(--muted);
   line-height: 1.6;
 }
+
+.lotto-card {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 20px;
+}
+
+.lotto-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.lotto-numbers {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  min-height: 68px;
+}
+
+.lotto-ball {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1c1611;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.4), 0 8px 18px rgba(0, 0, 0, 0.18);
+  animation: pop-in 360ms ease;
+}
+
+.lotto-ball:nth-child(1) { background: var(--ball-1); }
+.lotto-ball:nth-child(2) { background: var(--ball-2); }
+.lotto-ball:nth-child(3) { background: var(--ball-3); }
+.lotto-ball:nth-child(4) { background: var(--ball-4); }
+.lotto-ball:nth-child(5) { background: var(--ball-5); }
+.lotto-ball:nth-child(6) { background: var(--ball-6); }
 
 .actions {
   display: flex;
@@ -178,6 +240,17 @@ h1 {
   }
 }
 
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 @media (max-width: 720px) {
   .page {
     padding: 32px 20px 56px;
@@ -187,5 +260,15 @@ h1 {
   .top {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .lotto-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .lotto-ball {
+    width: 52px;
+    height: 52px;
   }
 }
