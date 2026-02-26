@@ -9,7 +9,7 @@ const prefersDark = () =>
 
 const setToggleLabel = (theme) => {
   if (!toggle) return;
-  const nextLabel = theme === "dark" ? "Light mode" : "Dark mode";
+  const nextLabel = theme === "dark" ? "라이트 모드" : "다크 모드";
   toggle.textContent = nextLabel;
   toggle.setAttribute("aria-pressed", theme === "dark");
 };

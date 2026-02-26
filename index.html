@@ -3,31 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lotto Picker</title>
+  <title>로또 추출기</title>
   <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
   <div class="page">
     <header class="top">
-      <div class="brand">Lotto Picker</div>
+      <div class="brand">로또 추출기</div>
       <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
-        Dark mode
+        다크 모드
       </button>
     </header>
 
     <main class="content">
-      <p class="eyebrow">Random draw</p>
-      <h1>Generate your lucky numbers.</h1>
+      <p class="eyebrow">랜덤 추출</p>
+      <h1>행운의 번호를 생성하세요.</h1>
       <p class="lead">
-        Click the button to draw six unique numbers between 1 and 45. The theme toggle stays right where it is.
+        버튼을 눌러 1부터 45까지 서로 다른 6개의 숫자를 추출하세요. 테마 토글은 그대로 유지됩니다.
       </p>
       <div class="lotto-card">
         <div class="lotto-header">
-          <h2>Today’s Pick</h2>
-          <button class="cta" type="button" data-action>Draw numbers</button>
+          <h2>오늘의 번호</h2>
+          <button class="cta" type="button" data-action>번호 뽑기</button>
         </div>
         <div class="lotto-numbers" data-numbers aria-live="polite"></div>
-        <p class="hint">Numbers are generated locally in your browser.</p>
+        <p class="hint">번호는 브라우저에서 로컬로 생성됩니다.</p>
       </div>
     </main>
   </div>
