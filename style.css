@@ -218,6 +218,11 @@ h2 {
   font-size: 0.95rem;
 }
 
+.ad-slot {
+  width: min(100%, 720px);
+  margin-top: 8px;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
